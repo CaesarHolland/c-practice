@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 // using namespace std;
 
 int N, R;
@@ -6,12 +7,13 @@ int N, R;
 int main()
 {
     std::cin>>N>>R;
-    int X[N], ans = 0;
+    int X[N];
 
     for (int i=0; i<N; i++)  std::cin>>X[i];
 
+    std::sort(X, X + N);
 
-    int i = 0;
+    int i = 0, ans = 0;
     while ( i < N )
     {
         int s = X[i];
